@@ -69,15 +69,19 @@ class ViewController: UIViewController {
         nextQuestionLabelCenterXConstraint.constant = 0
         currentQuestionLabelCenterXConstraint.constant += screenWidth
         
-        UIView.animate(withDuration: 0.5, delay: 0, options: [.curveLinear], animations: {
+        let animator = UIViewPropertyAnimator(duration: 0.5, curve: .linear) {
             self.currentQuestionLabel.alpha = 0
             self.nextQuestionLabel.alpha = 1
             self.view.layoutIfNeeded()
-        }) { (_) in
+        }
+        
+        animator.addCompletion { (_) in
             swap(&self.currentQuestionLabel, &self.nextQuestionLabel)
             swap(&self.currentQuestionLabelCenterXConstraint, &self.nextQuestionLabelCenterXConstraint)
             self.updateOffScreenLabel()
         }
+        
+        animator.startAnimation()
     }
     
     func updateOffScreenLabel() {
