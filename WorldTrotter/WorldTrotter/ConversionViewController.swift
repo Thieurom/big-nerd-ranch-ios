@@ -67,8 +67,17 @@ class ConversionViewController: UIViewController{
 extension ConversionViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let existingTextHasDecimalSeparator = textField.text?.range(of: ".")
-        let replacementTextHasDecimalSeparator = string.range(of: ".")
+        let decimalDigits = CharacterSet.decimalDigits
+        let decimalSeparator = Locale.current.decimalSeparator ?? "."
+        
+        for scalar in string.unicodeScalars {
+            if !decimalDigits.contains(scalar) && String(scalar) != decimalSeparator {
+                return false
+            }
+        }
+        
+        let existingTextHasDecimalSeparator = textField.text?.range(of: decimalSeparator)
+        let replacementTextHasDecimalSeparator = string.range(of: decimalSeparator)
         
         if existingTextHasDecimalSeparator != nil,
             replacementTextHasDecimalSeparator != nil {
