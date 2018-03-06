@@ -41,6 +41,18 @@ class ConversionViewController: UIViewController{
         updateCelsiusLabel()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let currentHour = Calendar.current.component(.hour, from: Date())
+        if currentHour < 7 || currentHour > 19 {
+            print("ny")
+            view.backgroundColor = UIColor(red: 128/255.0, green: 73/255.0, blue: 57/255.0, alpha: 1.0)
+        } else {
+            view.backgroundColor = UIColor(red: 245/255.0, green: 244/255.0, blue: 241/255.0, alpha: 1.0)
+        }
+    }
+    
     func updateCelsiusLabel() {
         if let celsiusValue = celsiusValue {
             celsiusLabel.text = numberFormatter.string(from: NSNumber(value: celsiusValue.value))
