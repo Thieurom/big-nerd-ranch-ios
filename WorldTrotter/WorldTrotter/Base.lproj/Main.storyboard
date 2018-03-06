@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Conversion View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ConversionViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,30 +42,50 @@
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="212" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D10-OC-6CU">
-                                <rect key="frame" x="132" y="28" width="111" height="84"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rva-oZ-JBL">
+                                <rect key="frame" x="62.5" y="28" width="250" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="TzG-rz-Zvt"/>
+                                </constraints>
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="fahrenheitFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="0fT-ol-Dbd"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="lfm-lV-GAq"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.95686274509803915" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="hSJ-Rv-ZDi" firstAttribute="centerX" secondItem="D10-OC-6CU" secondAttribute="centerX" id="0Kn-yg-uar"/>
-                            <constraint firstItem="7Gb-Cm-XoP" firstAttribute="centerX" secondItem="D10-OC-6CU" secondAttribute="centerX" id="1fB-Ya-rLO"/>
-                            <constraint firstItem="uxE-Tl-eSp" firstAttribute="top" secondItem="hSJ-Rv-ZDi" secondAttribute="bottom" constant="8" id="3Y4-1O-tBA"/>
-                            <constraint firstItem="cDy-Ff-rJm" firstAttribute="centerX" secondItem="D10-OC-6CU" secondAttribute="centerX" id="Gn5-1e-fk3"/>
-                            <constraint firstItem="cDy-Ff-rJm" firstAttribute="top" secondItem="uxE-Tl-eSp" secondAttribute="bottom" constant="8" id="SS2-KM-Ghd"/>
-                            <constraint firstItem="7Gb-Cm-XoP" firstAttribute="top" secondItem="cDy-Ff-rJm" secondAttribute="bottom" constant="8" id="Vg5-su-cD5"/>
-                            <constraint firstItem="D10-OC-6CU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ggD-b0-zhH"/>
-                            <constraint firstItem="uxE-Tl-eSp" firstAttribute="centerX" secondItem="D10-OC-6CU" secondAttribute="centerX" id="rJU-WX-Nts"/>
-                            <constraint firstItem="hSJ-Rv-ZDi" firstAttribute="top" secondItem="D10-OC-6CU" secondAttribute="bottom" constant="8" id="w80-Q3-F66"/>
-                            <constraint firstItem="D10-OC-6CU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="xMn-LT-aCg"/>
+                            <constraint firstItem="Rva-oZ-JBL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Iv-gb-Gwe"/>
+                            <constraint firstItem="7Gb-Cm-XoP" firstAttribute="centerX" secondItem="cDy-Ff-rJm" secondAttribute="centerX" id="H8a-Di-SR5"/>
+                            <constraint firstItem="cDy-Ff-rJm" firstAttribute="centerX" secondItem="uxE-Tl-eSp" secondAttribute="centerX" id="afc-y5-hXl"/>
+                            <constraint firstItem="uxE-Tl-eSp" firstAttribute="top" secondItem="hSJ-Rv-ZDi" secondAttribute="bottom" constant="8" id="l5W-Ov-Y10"/>
+                            <constraint firstItem="uxE-Tl-eSp" firstAttribute="centerX" secondItem="hSJ-Rv-ZDi" secondAttribute="centerX" id="ntG-wk-ldO"/>
+                            <constraint firstItem="hSJ-Rv-ZDi" firstAttribute="top" secondItem="Rva-oZ-JBL" secondAttribute="bottom" constant="8" id="qZh-tj-XCv"/>
+                            <constraint firstItem="cDy-Ff-rJm" firstAttribute="top" secondItem="uxE-Tl-eSp" secondAttribute="bottom" constant="8" id="t6p-66-qnG"/>
+                            <constraint firstItem="7Gb-Cm-XoP" firstAttribute="top" secondItem="cDy-Ff-rJm" secondAttribute="bottom" constant="8" id="tAn-cz-wir"/>
+                            <constraint firstItem="hSJ-Rv-ZDi" firstAttribute="centerX" secondItem="Rva-oZ-JBL" secondAttribute="centerX" id="uF2-Gc-hbb"/>
+                            <constraint firstItem="Rva-oZ-JBL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="xnZ-L7-U5P"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="tIk-y4-76Q" appends="YES" id="kp6-Ka-Ss1"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="cDy-Ff-rJm" id="oti-ud-WhQ"/>
+                        <outlet property="textField" destination="Rva-oZ-JBL" id="F5l-OQ-I9l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="tIk-y4-76Q">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="yLC-if-FQB"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>
