@@ -112,7 +112,7 @@
         <scene sceneID="sBR-64-aoG">
             <objects>
                 <viewController id="Qir-oA-6Xv" customClass="WebViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Web" id="V5w-Tw-oEh"/>
+                    <tabBarItem key="tabBarItem" title="Web" image="web" id="V5w-Tw-oEh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SwF-HB-PKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -142,5 +142,6 @@
     <resources>
         <image name="ConvertIcon" width="48" height="32"/>
         <image name="MapIcon" width="48" height="32"/>
+        <image name="web" width="22" height="22"/>
     </resources>
 </document>
