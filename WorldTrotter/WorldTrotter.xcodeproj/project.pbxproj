@@ -14,6 +14,7 @@
 		D87196DC2050238B000A3A57 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87196DB2050238B000A3A57 /* WebViewController.swift */; };
 		D8AFFCEF204E5D6900C70BB6 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AFFCEE204E5D6900C70BB6 /* ConversionViewController.swift */; };
 		D8AFFCF3204EA9A800C70BB6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AFFCF2204EA9A800C70BB6 /* MapViewController.swift */; };
+		D8C0EA0C2053E6F900E6B31B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8C0EA0B2053E6F900E6B31B /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +25,11 @@
 		D86A0179204E2C5000EF6EEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D86A017B204E2C5000EF6EEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D87196DB2050238B000A3A57 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		D87196DE2053DF74000A3A57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		D87196DF2053DFC2000A3A57 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		D8AFFCEE204E5D6900C70BB6 /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 		D8AFFCF2204EA9A800C70BB6 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		D8C0EA0B2053E6F900E6B31B /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 				D8AFFCF2204EA9A800C70BB6 /* MapViewController.swift */,
 				D87196DB2050238B000A3A57 /* WebViewController.swift */,
 				D86A0173204E2C5000EF6EEC /* Main.storyboard */,
+				D8C0EA0B2053E6F900E6B31B /* Localizable.strings */,
 				D86A0176204E2C5000EF6EEC /* Assets.xcassets */,
 				D86A0178204E2C5000EF6EEC /* LaunchScreen.storyboard */,
 				D86A017B204E2C5000EF6EEC /* Info.plist */,
@@ -130,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D86A017A204E2C5000EF6EEC /* LaunchScreen.storyboard in Resources */,
+				D8C0EA0C2053E6F900E6B31B /* Localizable.strings in Resources */,
 				D86A0177204E2C5000EF6EEC /* Assets.xcassets in Resources */,
 				D86A0175204E2C5000EF6EEC /* Main.storyboard in Resources */,
 			);
@@ -156,6 +162,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				D86A0174204E2C5000EF6EEC /* Base */,
+				D87196DE2053DF74000A3A57 /* en */,
+				D87196DF2053DFC2000A3A57 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -175,6 +183,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -232,6 +241,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

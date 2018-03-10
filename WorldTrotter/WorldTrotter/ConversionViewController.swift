@@ -46,7 +46,6 @@ class ConversionViewController: UIViewController{
         
         let currentHour = Calendar.current.component(.hour, from: Date())
         if currentHour < 7 || currentHour > 19 {
-            print("ny")
             view.backgroundColor = UIColor(red: 128/255.0, green: 73/255.0, blue: 57/255.0, alpha: 1.0)
         } else {
             view.backgroundColor = UIColor(red: 245/255.0, green: 244/255.0, blue: 241/255.0, alpha: 1.0)
@@ -63,8 +62,8 @@ class ConversionViewController: UIViewController{
 
     
     @IBAction func fahrenheitFieldEditingChanged(_ sender: UITextField) {
-        if let text = sender.text, let value = Double(text) {
-            fahrenheitValue = Measurement(value: value, unit: .fahrenheit)
+        if let text = sender.text, let number = numberFormatter.number(from: text) {
+            fahrenheitValue = Measurement(value: number.doubleValue, unit: .fahrenheit)
         } else {
             fahrenheitValue = nil
         }
