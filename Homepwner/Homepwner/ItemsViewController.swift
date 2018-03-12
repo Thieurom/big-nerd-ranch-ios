@@ -27,10 +27,21 @@ class ItemsViewController: UITableViewController {
         } else {
             let item = itemStore.allItems[index]
             
+            cell.textLabel?.font = UIFont.systemFont(ofSize: 20)
             cell.textLabel?.text = item.name
+            
+            cell.detailTextLabel?.font = UIFont.systemFont(ofSize: 20)
             cell.detailTextLabel?.text = "\(item.valueInDollars)"
         }
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == itemStore.allItems.count {
+            return 44.0
+        }
+        
+        return 60.0
     }
 }
