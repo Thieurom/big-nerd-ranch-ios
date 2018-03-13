@@ -28,6 +28,7 @@ class ItemsViewController: UITableViewController {
         let index = indexPath.row
         
         if index == itemStore.allItems.count {
+            cell.selectionStyle = .none
             cell.nameLabel?.text = "No more items!"
             cell.valueLabel?.text = ""
             cell.serialNumberLabel.text = ""
@@ -48,8 +49,16 @@ class ItemsViewController: UITableViewController {
         if indexPath.row == itemStore.allItems.count {
             return 44.0
         }
-        
+
         return 60.0
+    }
+    
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if indexPath.row == itemStore.allItems.count {
+            return nil
+        }
+        
+        return indexPath
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
