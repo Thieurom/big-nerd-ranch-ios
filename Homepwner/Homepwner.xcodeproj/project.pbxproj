@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D806E85E205983D500008D4C /* ItemTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D806E85D205983D500008D4C /* ItemTextField.swift */; };
 		D82B89192057C1FC005E2166 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82B89182057C1FC005E2166 /* ItemCell.swift */; };
 		D82B891B2057DB78005E2166 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82B891A2057DB78005E2166 /* DetailViewController.swift */; };
 		D87D2B9220551A530019F6BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87D2B9120551A530019F6BB /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D806E85D205983D500008D4C /* ItemTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTextField.swift; sourceTree = "<group>"; };
 		D82B89182057C1FC005E2166 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		D82B891A2057DB78005E2166 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D87D2B8E20551A530019F6BB /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +70,7 @@
 				D87D2BA7205529D80019F6BB /* ItemStore.swift */,
 				D87D2BA520551B6D0019F6BB /* Item.swift */,
 				D82B89182057C1FC005E2166 /* ItemCell.swift */,
+				D806E85D205983D500008D4C /* ItemTextField.swift */,
 				D87D2B9520551A530019F6BB /* Main.storyboard */,
 				D87D2B9820551A530019F6BB /* Assets.xcassets */,
 				D87D2B9A20551A530019F6BB /* LaunchScreen.storyboard */,
@@ -150,6 +153,7 @@
 			files = (
 				D87D2B9220551A530019F6BB /* AppDelegate.swift in Sources */,
 				D87D2BA620551B6D0019F6BB /* Item.swift in Sources */,
+				D806E85E205983D500008D4C /* ItemTextField.swift in Sources */,
 				D87D2BA8205529D80019F6BB /* ItemStore.swift in Sources */,
 				D82B891B2057DB78005E2166 /* DetailViewController.swift in Sources */,
 				D87D2BA420551AB30019F6BB /* ItemsViewController.swift in Sources */,
