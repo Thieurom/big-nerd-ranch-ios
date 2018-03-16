@@ -22,7 +22,7 @@ class ImageStore {
         cache.setObject(image, forKey: key as NSString)
         
         let url = imageURL(forKey: key)
-        if let data = UIImageJPEGRepresentation(image, 0.5) {
+        if let data = UIImagePNGRepresentation(image) {
             let _ = try? data.write(to: url, options: [.atomic])
         }
     }
