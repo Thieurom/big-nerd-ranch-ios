@@ -189,6 +189,12 @@
                                             <action selector="takePicture:" destination="6MQ-84-93p" id="fau-aY-Alj"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem width="303" style="plain" systemItem="fixedSpace" id="0Sj-3f-X7I"/>
+                                    <barButtonItem title="Clear Image" id="tjL-q1-we2">
+                                        <connections>
+                                            <action selector="removePicture:" destination="6MQ-84-93p" id="9aH-cM-b7A"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -209,6 +215,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="clearButton" destination="tjL-q1-we2" id="7Yf-fU-WjY"/>
                         <outlet property="dateLabel" destination="fvR-n8-Mg4" id="iOb-pz-Rc4"/>
                         <outlet property="imageView" destination="KJO-tu-2Fp" id="HRG-EJ-EtG"/>
                         <outlet property="nameField" destination="3wW-D9-qRe" id="BDe-NN-ufe"/>

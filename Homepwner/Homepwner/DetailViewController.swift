@@ -15,6 +15,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var valueField: ItemTextField!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var clearButton: UIBarButtonItem!
     
     var item: Item! {
         didSet {
@@ -39,8 +40,8 @@ class DetailViewController: UIViewController {
         return formatter
     }()
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         nameField.text = item.name
         serialNumberField.text = item.serialNumber
@@ -50,6 +51,8 @@ class DetailViewController: UIViewController {
         let key = item.itemKey
         let imageToDisplay = imageStore.image(forKey: key)
         imageView.image = imageToDisplay
+        
+        clearButton.isEnabled = imageToDisplay != nil
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -85,6 +88,12 @@ class DetailViewController: UIViewController {
         imagePicker.delegate = self
         
         present(imagePicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func removePicture(_ sender: UIBarButtonItem) {
+        imageStore.deleteImage(forKey: item.itemKey)
+        imageView.image = nil
+        clearButton.isEnabled = false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
