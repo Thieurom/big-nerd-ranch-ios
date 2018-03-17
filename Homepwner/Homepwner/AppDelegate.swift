@@ -31,13 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        let success = itemStore.saveChanges()
-        
-        if success {
-            print("Saved all ot the Items")
-        } else {
-            print("Could not save any of the Items")
-        }
+        itemStore.saveChanges()
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
