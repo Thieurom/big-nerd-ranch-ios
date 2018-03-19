@@ -95,16 +95,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="313.5" height="283"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="w9P-Ih-eOx">
-                                                <rect key="frame" x="0.0" y="0.0" width="313.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="313.5" height="58.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGh-Vw-Mxe">
-                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="313.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3wW-D9-qRe" customClass="ItemTextField" customModule="Homepwner" customModuleProvider="target">
-                                                        <rect key="frame" x="53" y="0.0" width="260.5" height="30"/>
+                                                        <rect key="frame" x="0.0" y="28.5" width="313.5" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -113,18 +113,19 @@
                                                         </connections>
                                                     </textField>
                                                 </subviews>
+                                                <variation key="heightClass=compact" axis="vertical"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ScX-Xw-n2a">
-                                                <rect key="frame" x="0.0" y="38" width="313.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="66.5" width="313.5" height="58.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8F-Ir-eaC">
-                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="313.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jIq-Eh-7WA" customClass="ItemTextField" customModule="Homepwner" customModuleProvider="target">
-                                                        <rect key="frame" x="53" y="0.0" width="260.5" height="30"/>
+                                                        <rect key="frame" x="0.0" y="28.5" width="313.5" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -133,18 +134,19 @@
                                                         </connections>
                                                     </textField>
                                                 </subviews>
+                                                <variation key="heightClass=compact" axis="vertical"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SrI-jb-wsa">
-                                                <rect key="frame" x="0.0" y="76" width="313.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="133" width="313.5" height="58.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4e6-O1-A2y">
-                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="313.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hm4-NB-59d" customClass="ItemTextField" customModule="Homepwner" customModuleProvider="target">
-                                                        <rect key="frame" x="53" y="0.0" width="260.5" height="30"/>
+                                                        <rect key="frame" x="0.0" y="28.5" width="313.5" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -153,18 +155,19 @@
                                                         </connections>
                                                     </textField>
                                                 </subviews>
+                                                <variation key="heightClass=compact" axis="vertical"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WCj-D1-Hcm">
-                                                <rect key="frame" x="0.0" y="114" width="313.5" height="169"/>
+                                                <rect key="frame" x="0.0" y="199.5" width="313.5" height="83.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvR-n8-Mg4">
-                                                        <rect key="frame" x="0.0" y="0.0" width="313.5" height="139"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvR-n8-Mg4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="313.5" height="53.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ME-sY-hA5">
-                                                        <rect key="frame" x="0.0" y="139" width="313.5" height="30"/>
+                                                        <rect key="frame" x="0.0" y="53.5" width="313.5" height="30"/>
                                                         <state key="normal" title="Change Date"/>
                                                         <connections>
                                                             <segue destination="g63-Qq-b2O" kind="show" identifier="changeDate" id="RnJ-TB-VLq"/>
