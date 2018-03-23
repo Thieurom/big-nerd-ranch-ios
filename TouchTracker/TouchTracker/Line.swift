@@ -13,3 +13,12 @@ struct Line {
     var begin = CGPoint.zero
     var end = CGPoint.zero
 }
+
+extension Line {
+    var angle: CGFloat {
+        let dx = end.x - begin.x
+        let dy = end.y - begin.y
+
+        return atan2(dy, dx)
+    }
+}
