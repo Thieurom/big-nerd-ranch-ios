@@ -13,6 +13,7 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
     var currentLines = [NSValue: Line]()
     var finishedLines = [Line]()
     var selectedLineIndex: Int?
+    var longPress: UILongPressGestureRecognizer!
     var moveRecognizer: UIPanGestureRecognizer!
     
     required init?(coder aDecoder: NSCoder) {
@@ -28,7 +29,7 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
         tapRecognizer.require(toFail: doubleTapRecognizer)
         addGestureRecognizer(tapRecognizer)
         
-        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(longPress(_:)))
+        longPress = UILongPressGestureRecognizer(target: self, action: #selector(longPress(_:)))
         addGestureRecognizer(longPress)
         
         moveRecognizer = UIPanGestureRecognizer(target: self, action: #selector(moveLine(_:)))
@@ -197,21 +198,21 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
     @objc func moveLine(_ gestureRecognizer: UIPanGestureRecognizer) {
         print("Recognized a pan")
         
-        if let index = selectedLineIndex {
-            if gestureRecognizer.state == .changed {
-                let translation = gestureRecognizer.translation(in: self)
-                
-                finishedLines[index].begin.x += translation.x
-                finishedLines[index].begin.y += translation.y
-                finishedLines[index].end.x += translation.x
-                finishedLines[index].end.y += translation.y
-                
-                gestureRecognizer.setTranslation(CGPoint.zero, in: self)
-                
-                setNeedsDisplay()
-            }
-        } else {
+        guard let index = selectedLineIndex, longPress.state == .began else {
             return
+        }
+        
+        if gestureRecognizer.state == .changed {
+            let translation = gestureRecognizer.translation(in: self)
+            
+            finishedLines[index].begin.x += translation.x
+            finishedLines[index].begin.y += translation.y
+            finishedLines[index].end.x += translation.x
+            finishedLines[index].end.y += translation.y
+            
+            gestureRecognizer.setTranslation(CGPoint.zero, in: self)
+            
+            setNeedsDisplay()
         }
     }
     
