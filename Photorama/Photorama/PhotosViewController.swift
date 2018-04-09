@@ -11,13 +11,39 @@ import UIKit
 class PhotosViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     var store: PhotoStore!
+    var photoType: PhotoType = .interesting {
+        didSet {
+            fetchPhotos(ofType: photoType)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        store.fetchInterestingPhotos { (photosResult) in
+        fetchPhotos(ofType: photoType)
+    }
+    
+    @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            photoType = .interesting
+        case 1:
+            photoType = .recent
+        default:
+            break
+        }
+    }
+    
+    func fetchPhotos(ofType type: PhotoType) {
+        imageView.image = nil
+        spinner.startAnimating()
+
+        store.fetchPhotos(ofType: type) { (photosResult) in
+            self.spinner.stopAnimating()
+            
             switch photosResult {
             case let .success(photos):
                 print("Successfully found \(photos.count) photos.")
@@ -26,7 +52,7 @@ class PhotosViewController: UIViewController {
                     self.updateImageView(for: firstPhoto)
                 }
             case let .failure(error):
-                print("Error fetching interesting photos: \(error)")
+                print("Error fetching photos: \(error)")
             }
         }
     }

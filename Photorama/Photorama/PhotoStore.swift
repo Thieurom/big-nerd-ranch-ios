@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum PhotoType {
+    case interesting
+    case recent
+}
+
 enum ImageResult {
     case success(UIImage)
     case failure(Error)
@@ -50,8 +55,16 @@ class PhotoStore {
         return .success(image)
     }
     
-    func fetchInterestingPhotos(completion: @escaping (PhotosResult) -> Void) {
-        let url = FlickrAPI.interestingPhotosURL
+    func fetchPhotos(ofType type: PhotoType, completion: @escaping (PhotosResult) -> Void) {
+        let url: URL
+        
+        switch type {
+        case .interesting:
+            url = FlickrAPI.interestingPhotosURL
+        case .recent:
+            url = FlickrAPI.recentPhotosURL
+        }
+                
         let request = URLRequest(url: url)
         
         let task = session.dataTask(with: request) { (data, response, error) in

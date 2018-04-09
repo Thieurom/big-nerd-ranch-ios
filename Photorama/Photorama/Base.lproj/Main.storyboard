@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Photorama-->
+        <!--Photos View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="PhotosViewController" customModule="Photorama" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,19 +21,38 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8P9-6M-P9w">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Tfo-dB-am2">
+                                <rect key="frame" x="177" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Tfo-dB-am2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GbI-xs-3cM"/>
                             <constraint firstItem="8P9-6M-P9w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gtp-9f-lxa"/>
                             <constraint firstItem="8P9-6M-P9w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JGo-ZR-L5o"/>
                             <constraint firstItem="8P9-6M-P9w" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Pjq-sx-GQQ"/>
                             <constraint firstItem="8P9-6M-P9w" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jxa-av-f2r"/>
+                            <constraint firstItem="Tfo-dB-am2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kaU-mr-zvs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Photorama" id="rHQ-Ag-SlZ"/>
+                    <navigationItem key="navigationItem" id="rHQ-Ag-SlZ">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="8Qi-ve-swt">
+                            <rect key="frame" x="108" y="7" width="159" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Interesting"/>
+                                <segment title="Recent"/>
+                            </segments>
+                            <connections>
+                                <action selector="segmentedControlValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="5pz-wo-Eck"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="8P9-6M-P9w" id="jKn-sT-WzO"/>
+                        <outlet property="spinner" destination="Tfo-dB-am2" id="7uU-rS-ca6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
