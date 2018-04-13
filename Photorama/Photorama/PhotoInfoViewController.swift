@@ -11,6 +11,7 @@ import UIKit
 class PhotoInfoViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var totalViewsLabel: UILabel!
     
     var photo: Photo! {
         didSet {
@@ -31,5 +32,9 @@ class PhotoInfoViewController: UIViewController {
                 print("Error fetching image for photo: \(error)")
             }
         }
+        
+        photo.totalViews += 1
+        totalViewsLabel.text = "\(photo.totalViews) view(s)"
+        store.saveIfNeeded()
     }
 }
