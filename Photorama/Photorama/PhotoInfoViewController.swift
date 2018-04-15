@@ -37,4 +37,16 @@ class PhotoInfoViewController: UIViewController {
         totalViewsLabel.text = "\(photo.totalViews) view(s)"
         store.saveIfNeeded()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "showTags"?:
+            let navController = segue.destination as! UINavigationController
+            let tagController = navController.topViewController as! TagsViewController
+            tagController.store = store
+            tagController.photo = photo
+        default:
+            preconditionFailure("Unexpected segue identifier")
+        }
+    }
 }
